@@ -23,10 +23,10 @@ typedef struct no{
 // Função que imprimi os elementos da pilha.
 
 /*(5)*/No* buscar_No_1(No *topo,int valor_procurado);
-// Função busca um nó com um determinado elemento, se encontrado o retorna, se não retorna NULL.
+// Função que busca um nó com um determinado elemento, se encontrado o retorna, se não retorna NULL.
 
 /*(6)*/int buscar_No_2(No *topo,int valor_procurado);
-// Função busca um nó com um determinado elemento, se encontrado retorna 1, se não retorna 0.
+// Função que busca um nó com um determinado elemento, se encontrado retorna 1, se não retorna 0.
 
 /*(7)*/int quant_elementos(No *topo);
 // Função que conta a quantidade de elementos dentro da minha pilha.
