@@ -73,7 +73,17 @@ No* inserir_ordenado(No *l,int valor) {
     return l;
 }
 
+No* remover_inicio(No *l,int *valor_removido) {
+    printf("bom dia");
+}
 
+No* remover_final(No *l,int *valor_removido) {
+
+}
+
+No* remover_elemento(No *l,int valor) {
+    
+}
 
 void imprimir(No *l) {
   No *aux;
