@@ -74,15 +74,44 @@ No* inserir_ordenado(No *l,int valor) {
 }
 
 No* remover_inicio(No *l,int *valor_removido) {
-    printf("bom dia");
+    No* remover;
+
+    if(l==NULL) return NULL;
+    remover = l;
+    l=remover->prox;
+    l->ant = NULL;
+    *valor_removido = remover->info;
+    free(remover);
+    return l;
 }
 
 No* remover_final(No *l,int *valor_removido) {
+    No *remover;
+    
+    if(l==NULL) return NULL;
+    for(remover=l;remover->prox != NULL;remover=remover->prox);
 
+    remover->ant->prox = NULL;
+    *valor_removido = remover->info;
+    free(remover);
+    return l;
 }
 
 No* remover_elemento(No *l,int valor) {
+    No *remover;
+
+    if(l==NULL) return NULL;
+    for(remover=l;remover != NULL && remover->info != valor;remover=remover->prox);
+
+    if(remover != NULL) {
+        remover->ant->prox = remover->prox;
+        remover->prox->ant = remover->ant;
+        free(remover);
+    }else{
+        return NULL;
+    }
     
+    return l;
 }
 
 void imprimir(No *l) {
