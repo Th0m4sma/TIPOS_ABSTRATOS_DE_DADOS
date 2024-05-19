@@ -1,4 +1,4 @@
-/* A pilha(LIFO) é um tipo abstrado de dados, onde tanto a sua inserção, quanto sua remoção é feita no inicio da sequência de nós. */
+/* A pilha(LIFO) é um tipo abstrado de dados, onde tanto o processo de inserção, quanto de remoção é realizado no inicio da sequência de nós. */
 
 #include <stdio.h> 
 #include <stdlib.h>

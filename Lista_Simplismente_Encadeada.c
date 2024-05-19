@@ -1,4 +1,4 @@
-/*A lista é um tipo abstrato de dados, onde a inserção e a remoção podem ser realizadas em qualquer posição da minha sequência de nós*/
+/*A lista é um tipo abstrato de dados, onde o processo de inserção e de remoção podem ser realizados em qualquer posição da minha sequência de nós*/
 
 #include <stdio.h>
 #include <stdlib.h>

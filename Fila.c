@@ -1,5 +1,4 @@
-/* A fila(FIFO) é um tipo abstrado de dados, onde a inserção é realizada no final e a remoção
-é realizada no inicio. */
+/* A fila(FIFO) é um tipo abstrado de dados, onde o processo de inserção é realizado no final e o processo de remoção é realizado no inicio da minha sequência de nós. */
 
 #include <stdio.h>
 #include <stdlib.h>

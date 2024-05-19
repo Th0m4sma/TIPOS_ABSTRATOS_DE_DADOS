@@ -1,6 +1,6 @@
 /*A lista duplamente encadeada é um tipo abstrato de dados, onde a inserção e a remoção podem ser realizadas em qualquer posição 
 da minha sequência de nós. Nesse momento teremos dois ponteiros na nossa estrutura, sendo um ponteiro que a aponta para o próximo
-nó, e um segundo ponteiro apontando para o nó anterior. Facilitando as operações de remoção e inserção.*/
+nó, e um segundo ponteiro apontando para o nó anterior. Facilitando a construção das operações de remoção e inserção.*/
 
 #include <stdio.h>
 #include <stdlib.h>
