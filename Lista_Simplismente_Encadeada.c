@@ -50,6 +50,14 @@ int main(void) {
   bool sair = false;
 
   while(!sair) {
+    printf("========================\n");
+    printf("]|[==-[-1-INSERIR-]==]|[\n");
+    printf("]|[==-[-2-REMOVER-]==]|[\n");
+    printf("]|[==-[-3-IMPRIMIR]==]|[\n");
+    printf("]|[==-[-4-BUSCAR-]-==]|[\n");
+    printf("]|[==-[-5-QUANT-]--==]|[\n");
+    printf("========================\n");
+    
     printf("Digite: ");
     scanf("%d",&op);
     
@@ -71,20 +79,20 @@ int main(void) {
         printf("\n");
         break;
       case 4:
-        printf("Digite o elemento que deseja procurar na pilha: ");
+        printf("Digite o elemento que deseja procurar na lista: ");
         scanf("%d",&valor);
         
         achou_elemento = buscar2(lista,valor);
         if(achou_elemento == 1) {
-          printf("O elemento pertence a pilha\n");  
+          printf("O elemento pertence a lista\n");  
         }else{
-          printf("O elemento nao pertence a pilha\n");
+          printf("O elemento nao pertence a lista\n");
         }
         
         break;
       case 5:
         quantidade = quant_elementos(lista);
-        printf("Na pilha temos %d elementos.\n",quantidade);
+        printf("Na lista temos %d elementos.\n",quantidade);
         
         break;
       case 6:

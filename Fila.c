@@ -74,20 +74,20 @@ int main(void) {
         printf("\n");
         break;
       case 4:
-        printf("Digite o elemento que deseja procurar na pilha: ");
+        printf("Digite o elemento que deseja procurar na fila: ");
         scanf("%d",&valor);
         achou_elemento = buscar2(fila,valor);
 
         if(achou_elemento == 1) {
-          printf("O elemento pertence a pilha\n");  
+          printf("O elemento pertence a fila\n");  
         }else{
-          printf("O elemento nao pertence a pilha\n");
+          printf("O elemento nao pertence a fila\n");
         }
 
         break;
       case 5:
         quantidade = quant_elementos(fila);
-        printf("Na pilha temos %d elementos.\n",quantidade);
+        printf("Na fila temos %d elementos.\n",quantidade);
         
         break;
       case 6:

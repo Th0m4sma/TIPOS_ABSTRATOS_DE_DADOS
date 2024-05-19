@@ -48,6 +48,63 @@ typedef struct no{
 // Função que desaloca todos os nós alocados de uma lista.
 
 int main(void) {
+  No *lista = NULL;
+  int valor,op,quantidade,valor_removido,achou_elemento;
+  bool sair = false;
+
+  while(!sair) {
+    printf("========================\n");
+    printf("]|[==-[-1-INSERIR-]==]|[\n");
+    printf("]|[==-[-2-REMOVER-]==]|[\n");
+    printf("]|[==-[-3-IMPRIMIR]==]|[\n");
+    printf("]|[==-[-4-BUSCAR-]-==]|[\n");
+    printf("]|[==-[-5-QUANT-]--==]|[\n");
+    printf("========================\n");
+
+    printf("Digite: ");
+    scanf("%d",&op);
+    
+     switch(op) {
+      case 1:
+
+        printf("Digite o valor que deseja inserir: ");
+        scanf("%d",&valor);
+        lista = inserir_ordenado(lista,valor);
+        
+        break;
+      case 2:
+        lista = remover_final(lista,valor);
+        printf("O numero %d foi removido\n",valor_removido);
+        
+        break;
+      case 3:
+        imprimir(lista);
+        printf("\n");
+        break;
+      case 4:
+        printf("Digite o elemento que deseja procurar na pilha: ");
+        scanf("%d",&valor);
+        
+        achou_elemento = buscar2(lista,valor);
+        if(achou_elemento == 1) {
+          printf("O elemento pertence a pilha\n");  
+        }else{
+          printf("O elemento nao pertence a pilha\n");
+        }
+        
+        break;
+      case 5:
+        quantidade = quant_elementos(lista);
+        printf("Na pilha temos %d elementos.\n",quantidade);
+        
+        break;
+      case 6:
+        printf("Saindo\n");
+        sair = true;
+        break;
+    
+      }
+    }
 
 }
 
