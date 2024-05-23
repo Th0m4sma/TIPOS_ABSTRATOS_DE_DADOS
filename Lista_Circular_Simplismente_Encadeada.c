@@ -2,18 +2,29 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-
+// Definição da estrutura típica dos nós que pertencem a uma lista:
 typedef struct no{
     int info;
     struct no *prox;
 }No;
 
-No* inserir_inicio(No *l,int valor);
-No* inserir_final(No *l,int valor);
-No* inserir_ordenado(No *l,int valor);
-No* remover_inicio(No *l,int *valor_removido);
-No* remover_final(No *l,int *valor_removido);
-No* remover_elemento(No *l,int valor);
+/*(1)*/No* inserir_inicio(No *l,int valor);
+// Função que inseri os elementos no inicio da minha sequência de nós.
+
+/*(2)*/No* inserir_final(No *l,int valor);
+// Função que inseri os elementos no final da minha sequência de nós.
+
+/*(3)*/No* inserir_ordenado(No *l,int valor);
+// Função que inseri os elementos de forma ordenada na minha sequência de nós.
+
+/*(4)*/No* remover_inicio(No *l,int *valor_removido);
+// Função que remove os elementos do inicio da minha sequência de nós.
+
+/*(5)*/No* remover_final(No *l,int *valor_removido);
+// Função que remove os elementos do final da minha sequência de nós.
+
+/*(6)*/No* remover_elemento(No *l,int valor);
+// Função que remove um elemento passado como parâmetro da minha função.
 
 /*(7)*/void imprimir(No *l);
 // Função que imprimi os elementos da lista.
