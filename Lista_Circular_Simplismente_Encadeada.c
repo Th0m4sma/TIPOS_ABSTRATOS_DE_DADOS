@@ -8,6 +8,28 @@ typedef struct no{
     struct no *prox;
 }No;
 
+No* inserir_inicio(No *l,int valor);
+No* inserir_final(No *l,int valor);
+No* inserir_ordenado(No *l,int valor);
+No* remover_inicio(No *l,int *valor_removido);
+No* remover_final(No *l,int *valor_removido);
+No* remover_elemento(No *l,int valor);
+
+/*(7)*/void imprimir(No *l);
+// Função que imprimi os elementos da lista.
+
+/*(8)*/No* buscar1(No *l,int valor_procurado);
+// Função que busca um nó com um determinado elemento, se encontrado o retorna, se não retorna NULL.
+
+/*(9)*/int buscar2(No *l,int valor_procurado);
+// Função que busca um nó com um determinado elemento, se encontrado retorna 1, se não retorna 0.
+
+/*(10)*/int quant_elementos(No *l);
+// Função que conta a quantidade de elementos dentro da minha lista.
+
+/*(11)*/void liberar(No *p);
+// Função que desaloca todos os nós alocados de uma lista.
+
 
 int main(void) {
 
@@ -48,7 +70,31 @@ No* inserir_final(No *l,int valor) {
 
 /*(3)*///FUNÇÃO DE INSERÇÃO ORDENADA:
 No* inserir_ordenado(No *l,int valor) {
-    
+    No *aux,*ant,*novo = (No *)malloc(sizeof(No));
+    novo->info = valor;
+
+    if(l==NULL) {
+        novo->prox = novo;
+        l = novo;
+        return l;
+    }else{
+        for(aux=l->prox,ant=l;aux->prox == l && aux->info < valor;ant=aux,aux=aux->prox);
+        if(ant==l) {
+            novo->prox = l->prox;
+            l->prox = novo;
+        }else if(aux->prox == l && l->info < valor) {
+            novo->prox = l->prox;
+            l->prox = novo;
+            l = novo;
+        }else if(aux->prox == l && l->info > valor){
+            novo->prox = aux->prox;
+            aux->prox = novo;
+        }else{
+            novo->prox = aux->prox;
+            aux->prox = novo;
+        }
+    }
+    return l;
 }
 
 /*(4)*///FUNÇÃO DE REMOÇÃO NO INÍCIO:
@@ -85,7 +131,20 @@ No* remover_final(No *l,int *valor_removido) {
 
 /*(6)*///FUNÇÃO DE REMOÇÃO:
 No* remover_elemento(No *l,int valor) {
+    No *remover;
 
+    if(l==NULL) {
+        return NULL;
+    }else if(l->prox->info == valor) {
+        remover = l->prox;
+        l->prox = remover->prox;
+        free(remover);
+    }else{
+        for(remover=l->prox->prox;remover != l->prox && remover->info != valor;remover=remover->prox);
+        if(remover != l->prox) {
+            
+        }
+    }
 }
 
 
